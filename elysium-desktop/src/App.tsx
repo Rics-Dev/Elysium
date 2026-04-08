@@ -1,7 +1,8 @@
 import { createSignal } from "solid-js";
 import { invoke } from "@tauri-apps/api/core";
 import logo from "./assets/logo.svg";
-import { ThemeToggle } from "./components/ui/theme-toggle";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Button } from "@/components/button";
 
 export default function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
@@ -78,12 +79,11 @@ export default function App() {
             placeholder="Enter a name..."
             class="w-full rounded-md border border-input bg-background px-4 py-2 text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
           />
-          <button
+          <Button
             type="submit"
-            class="inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground shadow-sm transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
           >
             Greet
-          </button>
+          </Button>
         </form>
 
         <p class="min-h-6 text-center text-sm text-muted-foreground">{greetMsg()}</p>

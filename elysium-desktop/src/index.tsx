@@ -7,8 +7,8 @@ import App from "./App";
 render(
   () => (
     <>
-      <ColorModeScript />
-      <ColorModeProvider>
+      <ColorModeScript initialColorMode="system" />
+      <ColorModeProvider initialColorMode="system">
         <App />
       </ColorModeProvider>
     </>
